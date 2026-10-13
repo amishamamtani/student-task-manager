@@ -60,3 +60,14 @@ For simplicity, tasks are stored in server memory. They reset when the server or
 ## DevOps flow
 
 GitHub → GitHub Actions → Docker image → Google Artifact Registry → Google Kubernetes Engine (GKE) → Prometheus → Grafana.
+
+## DevOps Project Objectives
+
+This project demonstrates:
+- Git and GitHub for version control
+- GitHub Actions for continuous integration
+- Docker for containerization
+- Google Artifact Registry for image storage
+- Google Kubernetes Engine (GKE) for deployment
+- Prometheus and Grafana for monitoring
+
