@@ -1,0 +1,13 @@
+{
+  "name": "student-task-manager",
+  "version": "1.0.0",
+  "description": "A simple student task manager for a DevOps project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "prom-client": "^15.1.3"
+  }
+}

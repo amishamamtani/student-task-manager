@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="brand-mark">ST</div>
+      <div>
+        <p class="eyebrow">STUDENT WORKSPACE</p>
+        <h1>Task Manager</h1>
+      </div>
+      <span class="live-pill"><span></span> Ready to focus</span>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">YOUR DAY, ORGANIZED</p>
+        <h2>Small steps. <span>Big progress.</span></h2>
+        <p class="subtext">Keep track of assignments, revision, and everything in between.</p>
+      </div>
+      <div class="date-card">
+        <span>MY WORKSPACE</span>
+        <strong id="today"></strong>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Task summary">
+      <article class="stat-card">
+        <span class="stat-icon blue">☷</span>
+        <p>Total tasks</p>
+        <strong id="total-count">0</strong>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon amber">◷</span>
+        <p>In progress</p>
+        <strong id="pending-count">0</strong>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon green">✓</span>
+        <p>Completed</p>
+        <strong id="completed-count">0</strong>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <div class="task-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TASK LIST</p>
+            <h3>Your tasks</h3>
+          </div>
+          <span id="task-badge" class="count-badge">0 tasks</span>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <label for="task-title">Add a new task</label>
+          <div class="input-row">
+            <input id="task-title" type="text" placeholder="e.g. Finish DBMS assignment" maxlength="120" required>
+            <button type="submit">+ Add task</button>
+          </div>
+        </form>
+
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter active" data-filter="all" type="button">All tasks</button>
+          <button class="filter" data-filter="pending" type="button">In progress</button>
+          <button class="filter" data-filter="completed" type="button">Completed</button>
+        </div>
+
+        <ul id="task-list" class="task-list"></ul>
+        <div id="empty-state" class="empty-state">
+          <div class="empty-icon">✦</div>
+          <strong>No tasks here yet</strong>
+          <p>Add a task above and start making progress.</p>
+        </div>
+        <p id="message" class="message" role="status"></p>
+      </div>
+
+      <aside class="side-panel">
+        <div class="focus-card">
+          <div class="focus-icon">✦</div>
+          <p class="eyebrow">A LITTLE REMINDER</p>
+          <h3>Progress over perfection.</h3>
+          <p>Pick one task, give it your attention, and take it one step at a time.</p>
+        </div>
+        <div class="progress-card">
+          <div class="progress-title">
+            <strong>Today's progress</strong>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="progress-track"><div id="progress-bar"></div></div>
+          <p id="progress-caption">You've got this. Start with one task.</p>
+        </div>
+      </aside>
+    </section>
+    <footer>Student Task Manager <span>•</span> Stay organized, keep moving.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
